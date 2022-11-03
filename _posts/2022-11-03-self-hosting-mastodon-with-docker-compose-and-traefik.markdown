@@ -189,3 +189,6 @@ Will return json with redirects.
 * Connection #1 to host mastodon.example.com left intact
 {"subject":"acct:username@example.com","aliases":["https://mastodon.example.com/@username","https://mastodon.example.com/users/username"],"links":[{"rel":"http://webfinger.net/rel/profile-page","type":"text/html","href":"https://mastodon.example.com/@username"},{"rel":"self","type":"application/activity+json","href":"https://mastodon.example.com/users/username"},{"rel":"http://ostatus.org/schema/1.0/subscribe","template":"https://mastodon.example.com/authorize_interaction?uri={uri}"}]}%
 ```
+
+
+Shoutout to [Jake](https://mastodon.jakewharton.com/@jw) for the help and quick review.
