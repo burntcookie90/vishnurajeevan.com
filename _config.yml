@@ -29,6 +29,8 @@ mastodon:
   - username: vishnu
     instance: mastodon.vishnurajeevan.com
 
+permalink: /:title/
+
 # Build settings
 theme: minima
 plugins:
