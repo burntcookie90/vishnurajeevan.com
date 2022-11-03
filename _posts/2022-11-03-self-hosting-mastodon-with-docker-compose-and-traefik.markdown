@@ -155,7 +155,7 @@ docker-compose run --rm web bin/tootctl accounts create <username> --email=<emai
 docker-compose run --rm web bin/tootctl accounts modify <username> --confirm --approve --enable --role=admin
 ```
 
-### __draw the owl section__:
+### __draw the owl__:
 Mastodon needs a [webfinger](https://docs.joinmastodon.org/spec/webfinger/) to resolve links across the fediverse.
 Setting this up will be different based on your infrastructure. I ended up using netlify to host my jekyll website and setup redirects via that.
 
