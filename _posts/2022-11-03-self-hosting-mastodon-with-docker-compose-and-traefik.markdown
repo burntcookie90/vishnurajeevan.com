@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Self Hosting Mastodon with Docker-Compose and Traefik
-date: November 03, 2022
 ---
 
 (This assumes you have a running traefik instance)
