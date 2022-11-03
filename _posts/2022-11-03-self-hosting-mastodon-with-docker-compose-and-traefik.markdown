@@ -28,6 +28,7 @@ Move `PostgreSQL` block to a `db.env` file so you can share with the postgres co
 `db.env`
 ```bash
 # PostgreSQL
+# There might be some fancy way to de-dupe this, i just sent it.
 # ----------
 DB_HOST=db
 DB_USER=mastodon
@@ -35,7 +36,7 @@ DB_NAME=mastodon_production
 DB_PASS=<generated password>
 DB_PORT=5432
 
-# Needed so that the pgsql container creates the exected roles and dbs for you
+# Needed so that the pgsql container creates the expected roles and dbs for you
 POSTGRES_DB=mastodon_production
 POSTGRES_USER=mastodon
 POSTGRES_PASSWORD=<generated password>
@@ -154,6 +155,28 @@ docker-compose run --rm web bin/tootctl accounts create <username> --email=<emai
 docker-compose run --rm web bin/tootctl accounts modify <username> --confirm --approve --enable --role=admin
 ```
 
+### __draw the owl section__:
+Mastodon needs a [webfinger](https://docs.joinmastodon.org/spec/webfinger/) to resolve links across the fediverse.
+Setting this up will be different based on your infrastructure. I ended up using netlify to host my jekyll website and setup redirects via that.
+
+`_redirects`
+```
+/.well-known/webfinger	https://$(WEB_DOMAIN)/.well-known/webfinger
+```
+
+`_config.yml`
+```
+include:
+  - '_redirects'
+```
+
+On Netlify make sure your bare domain is the primary domain, and that Netlify is serving your SSL certs via Let's Encrypt.
+
+On my domain registrar, I've setup an `A` Record pointing my `WEB_DOMAIN` subdomain to my instance's IP address.
+
+
+### Test webfinger
+
 Test that your instance's web finger is setup right.
 
 ```bash
@@ -161,3 +184,8 @@ curl -vL https://example.com/.well-known/webfinger?resource=acct:@username@examp
 ```
 
 Will return json with redirects.
+
+```
+* Connection #1 to host mastodon.example.com left intact
+{"subject":"acct:username@usernamerajeevan.com","aliases":["https://mastodon.example.com/@username","https://mastodon.example.com/users/username"],"links":[{"rel":"http://webfinger.net/rel/profile-page","type":"text/html","href":"https://mastodon.example.com/@username"},{"rel":"self","type":"application/activity+json","href":"https://mastodon.example.com/users/username"},{"rel":"http://ostatus.org/schema/1.0/subscribe","template":"https://mastodon.example.com/authorize_interaction?uri={uri}"}]}%
+```
