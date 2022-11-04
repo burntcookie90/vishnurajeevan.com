@@ -109,7 +109,7 @@ services:
       - redis
     labels:
       - traefik.enable=true
-      - traefik.http.routers.mastodonstreaming.rule=(Host(`example.com`) && PathPrefix(/api/v1/streaming))
+      - traefik.http.routers.mastodonstreaming.rule=(Host(`example.com`) && PathPrefix(`/api/v1/streaming`))
       - traefik.http.routers.mastodonstreaming.entrypoints=<https-entry-point>
       - traefik.http.routers.mastodonstreaming.tls.certresolver=letsencrypttls
       - traefik.http.services.mastodonstreaming.loadbalancer.server.port=4000
