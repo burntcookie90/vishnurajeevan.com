@@ -148,7 +148,7 @@ Run the following:
 docker-compose run --rm web rake secret  #copy to SECRET_KEY_BASE in .env.production
 docker-compose run --rm web rake secret  #copy to OTP_SECRET in .env.production
 docker-compose run --rm web bundle exec rake mastodon:webpush:generate_vapid_key #copy to VAPID_* keys
-docker-compose -f run --rm web bundle exec rake db:migrate
+docker-compose run --rm web bundle exec rake db:migrate
 docker-compose run --rm web bin/tootctl accounts create <username> --email=<email>
 docker-compose run --rm web bin/tootctl accounts modify <username> --confirm --approve --enable --role=admin
 ```
