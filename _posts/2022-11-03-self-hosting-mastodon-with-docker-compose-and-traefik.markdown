@@ -178,7 +178,7 @@ On my domain registrar, I've setup an `A` Record pointing my `WEB_DOMAIN` subdom
 Test that your instance's web finger is setup right.
 
 ```bash
-curl -vL https://example.com/.well-known/webfinger?resource=acct:@username@example.com
+curl -vL https://example.com/.well-known/webfinger?resource=acct:username@example.com
 ```
 
 Will return json with redirects.
