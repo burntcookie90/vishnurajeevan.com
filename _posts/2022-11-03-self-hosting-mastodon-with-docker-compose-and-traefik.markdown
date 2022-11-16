@@ -67,7 +67,7 @@ services:
       - /mnt/user/appdata/mastodon/redis:/data
 
   web:
-    image: tootsuite/mastodon
+    image: tootsuite/mastodon:v3.5.3
     restart: always
     env_file:
       - .env.production
@@ -92,7 +92,7 @@ services:
       - traefik.http.services.mastodonweb.loadbalancer.server.port=3000
 
   streaming:
-    image: tootsuite/mastodon
+    image: tootsuite/mastodon:v3.5.3
     restart: always
     env_file:
       - .env.production
@@ -116,7 +116,7 @@ services:
 
 
   sidekiq:
-    image: tootsuite/mastodon
+    image: tootsuite/mastodon:v.3.5.3
     restart: always
     env_file:
       - .env.production
@@ -186,6 +186,23 @@ Will return json with redirects.
 ```
 * Connection #1 to host mastodon.example.com left intact
 {"subject":"acct:username@example.com","aliases":["https://mastodon.example.com/@username","https://mastodon.example.com/users/username"],"links":[{"rel":"http://webfinger.net/rel/profile-page","type":"text/html","href":"https://mastodon.example.com/@username"},{"rel":"self","type":"application/activity+json","href":"https://mastodon.example.com/users/username"},{"rel":"http://ostatus.org/schema/1.0/subscribe","template":"https://mastodon.example.com/authorize_interaction?uri={uri}"}]}%
+```
+
+### Updating to 4.0.2
+
+Here's how I updated my instance to 4.0.2:
+
+```
+docker-compose exec db pg_dump -Fc -U mastodon mastodon_production > 3-5-3.dump
+```
+
+Update usages of `tootsuite/mastodon:v3.5.3` to `toosuite/mastodon:v4.0.2`
+
+```
+docker-compose pull
+docker-compose run --rm -e SKIP_POST_DEPLOYMENT_MIGRATIONS=true web rails db:migrate
+docker-compose run --rm web rails db:migrate
+docker-compose up -d
 ```
 
 
