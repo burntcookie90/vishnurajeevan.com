@@ -116,7 +116,7 @@ services:
 
 
   sidekiq:
-    image: tootsuite/mastodon:v.3.5.3
+    image: tootsuite/mastodon:v3.5.3
     restart: always
     env_file:
       - .env.production
