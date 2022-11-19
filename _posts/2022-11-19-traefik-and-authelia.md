@@ -2,7 +2,7 @@
 title: Securing Traefik with Authelia
 ---
 
-(Refer to this [post](https://vishnurajeevan.com/traefik/) for a bare setup.
+(Refer to {% post_url 2022-11-19-traefik %} for a bare setup.)
 
 ```yaml
 version: "3"
