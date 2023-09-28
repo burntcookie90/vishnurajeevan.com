@@ -60,6 +60,7 @@ plugins:
   
 include:
   - '_redirects'
+  - '_img'
 
 defaults:
   # _posts
