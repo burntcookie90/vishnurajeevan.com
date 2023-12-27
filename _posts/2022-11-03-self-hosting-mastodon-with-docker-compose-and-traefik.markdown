@@ -205,5 +205,16 @@ docker-compose run --rm web rails db:migrate
 docker-compose up -d
 ```
 
+### Generally updating
+
+Update all tootsuite versions to newest
+
+```
+docker-compose down
+docker-compose pull
+docker-compose run --rm web bundle exec rake db:migrate
+docker-compose run --rm web bundle exec rake assets:precompile
+docker-compose up -d
+```
 
 Shoutout to [Jake](https://mastodon.jakewharton.com/@jw) for the help and quick review.
