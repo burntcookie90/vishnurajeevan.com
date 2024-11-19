@@ -58,7 +58,9 @@ curl --request POST \
 
 Then you should be able to sign up on https://bsky.app with your $PDS_HOSTNAME as the hosting provider.
 
-If you're looking for mastodon check [here]({% link 2022-11-03-self-hosting-mastodon-with-docker-compose-and-traefik.md%})
+If you're looking for mastodon check [here]({% link self-hosting-mastodon-with-docker-compose-and-traefik %}).
+
+If you're looking for setting up traefik check [here]({ % link traefik %}).
 
 
 Used [https://therobbiedavis.com/selfhosting-bluesky-with-docker-and-swag/](https://therobbiedavis.com/selfhosting-bluesky-with-docker-and-swag/) as a resource for this.
