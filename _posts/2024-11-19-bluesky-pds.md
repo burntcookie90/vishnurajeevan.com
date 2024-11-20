@@ -5,7 +5,9 @@ title: Self Hosting Bluesky PDS with Docker-Compose and Traefik
 (This assumes you have a running traefik instance, and working domain/dns)
 
 
-```docker-compose.yml
+`docker-compose.yml`
+
+```yaml
 services:
   pds:
     container_name: pds
