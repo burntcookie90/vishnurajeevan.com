@@ -62,7 +62,7 @@ Then you should be able to sign up on https://bsky.app with your $PDS_HOSTNAME a
 
 If you're looking for mastodon check [here]({% post_url 2022-11-03-self-hosting-mastodon-with-docker-compose-and-traefik %}).
 
-If you're looking for setting up traefik check [here]({ % post_url 2022-11-19-traefik %}).
+If you're looking for setting up traefik check [here]({% post_url 2022-11-19-traefik %}).
 
 
 Used [https://therobbiedavis.com/selfhosting-bluesky-with-docker-and-swag/](https://therobbiedavis.com/selfhosting-bluesky-with-docker-and-swag/) as a resource for this.
