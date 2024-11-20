@@ -23,7 +23,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Just stuff
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://vishnurajeevan.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: vishnurajeevan
 github_username:  burntcookie90
 mastodon:
   - username: vishnu
@@ -40,9 +39,9 @@ footer:
     - label: "Mastodon"
       icon: "fab fa-fw fa-mastodon"
       url: "https://mastodon.vishnurajeevan.com/@vishnu/"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/vishnurajeevan/"
+    - label: "Bluesky"
+      icon: "fab fa-fw fa-at"
+      url: "https://bsky.app/profile/vishnurajeevan.com"
     - label: "Github"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/burntcookie90"
