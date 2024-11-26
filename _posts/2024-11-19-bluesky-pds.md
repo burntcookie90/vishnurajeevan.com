@@ -25,6 +25,7 @@ services:
       traefik.http.services.bluesky-pds.loadbalancer.server.port: 3000
     environment:
       - PDS_DATADIR=/pds
+      - PDS_DATA_DIRECTORY=/pds
       - PDS_BLOBSTORE_DISK_LOCATION=/pds/blocks
       - PDS_HOSTNAME= #example.com
       - PDS_JWT_SECRET= #openssl rand --hex 16
