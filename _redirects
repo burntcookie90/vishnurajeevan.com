@@ -1,2 +1,2 @@
 /.well-known/webfinger	https://mastodon.vishnurajeevan.com/.well-known/webfinger
-/.well-known/atproto-did assets/atproto-did
+/.well-known/atproto-did assets/well-known/atproto-did
