@@ -2,6 +2,8 @@
 title: Self Hosting Bluesky PDS with Docker-Compose and Traefik
 ---
 
+**Update 11/26/2024**: Added `PDS_DATA_DIRECTORY` environment variable to compose.yml. The `installer.sh` script in the pds repo unusually aliases `PDS_DATADIR` to this for actually binding the volume.
+
 (This assumes you have a running traefik instance, and working domain/dns)
 
 
