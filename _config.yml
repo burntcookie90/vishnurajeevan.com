@@ -34,13 +34,16 @@ author:
   name: "Vishnu Rajeevan"
   location: Atlanta, GA
 
+comments:
+  provider: "custom"
+
 footer:
   links:
     - label: "Mastodon"
       icon: "fab fa-fw fa-mastodon"
       url: "https://mastodon.vishnurajeevan.com/@vishnu/"
     - label: "Bluesky"
-      icon: "fab fa-fw fa-at"
+      icon: "fab fa-fw fa-bluesky"
       url: "https://bsky.app/profile/vishnurajeevan.com"
     - label: "Github"
       icon: "fab fa-fw fa-github"
@@ -75,6 +78,12 @@ defaults:
       related: true
       show_date: true
       words_per_minute: 100
+
+# head_scripts:
+#   - https://unpkg.com/react@18/umd/react.production.min.js
+#   - https://unpkg.com/react-dom@18/umd/react-dom.production.min.js
+#   - https://unpkg.com/bluesky-comments@latest/dist/bluesky-comments.umd.js
+
 
 
 # Exclude from processing.
