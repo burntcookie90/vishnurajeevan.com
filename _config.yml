@@ -76,6 +76,12 @@ defaults:
       show_date: true
       words_per_minute: 100
 
+footer_scripts:
+  - https://unpkg.com/react@18/umd/react.production.min.js
+  - https://unpkg.com/react-dom@18/umd/react-dom.production.min.js
+  - https://unpkg.com/bluesky-comments@latest/dist/bluesky-comments.umd.js
+  - assets/bsky-comments.js
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
