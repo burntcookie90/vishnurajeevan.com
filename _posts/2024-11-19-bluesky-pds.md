@@ -89,3 +89,6 @@ Used [https://therobbiedavis.com/selfhosting-bluesky-with-docker-and-swag/](http
 </style>
 <script type="module" src="https://esm.sh/gh/loueed/bsky@v1.0.0/comments"></script>
 <bsky-comments post="at://did:plc:utqsoejrgbeaczfmiepczpax/app.bsky.feed.post/3lbulpxnenc2t"></bsky-comments>
+
+
+Comments via: [https://github.com/LoueeD/bsky](https://github.com/LoueeD/bsky)
