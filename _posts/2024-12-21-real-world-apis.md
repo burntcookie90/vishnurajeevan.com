@@ -58,3 +58,24 @@ The design of our trash bin obscures the "functionality" of the two containers w
 ---
 
 Thanks [Huyen](https://bsky.app/profile/queencodemonkey.dev) for the review!
+
+
+<style>
+  :root {
+    color-scheme: dark;
+  }
+  bsky-comments {
+    --background-color: none;
+    --text-color: rgba(255,255,255,0.8);
+    --link-color: #0077cc;
+    --link-hover-color: #005fa3;
+    --comment-meta-color: rgba(255,255,255,0.5);
+    --error-color: #ff4d4d;
+    --reply-border-color: rgba(255,255,255,0.1);
+    --button-background-color: rgba(255,255,255,0.1);
+    --button-hover-background-color: rgba(255,255,255,0.2);
+    --author-avatar-border-radius: 50%;
+  }
+</style>
+<script type="module" src="https://esm.sh/gh/loueed/bsky@v1.0.0/comments"></script>
+<bsky-comments post="at://did:plc:utqsoejrgbeaczfmiepczpax/app.bsky.feed.post/3ldw6cfpqac2h"></bsky-comments>
