@@ -55,9 +55,6 @@ services:
     environment:
       - LIBRO_FM_USERNAME=<>
       - LIBRO_FM_PASSWORD=<>
-      # extra optional: setting these enables them, dont add them if you dont want them.
-      - DRY_RUN=true 
-      - VERBOSE=true
       - RENAME_CHAPTERS=true
       - WRITE_TITLE_TAG=true #this one requires RENAME_CHAPTERS to be true as well
 ```
