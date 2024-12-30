@@ -1,6 +1,6 @@
-```
-Self Hosting Your Audiobooks
-```
+---
+title: Self Hosting Your Audiobooks
+---
 
 4 years ago I made the switch from Audible to Libro.fm. Libro.fm serves DRM free audiobooks, shares revenue with a local bookshop you select and works on a similar monthly subscription/credit system to Audible. 
 
